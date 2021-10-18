@@ -5,6 +5,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/urfave/cli/v2"
@@ -15,6 +16,13 @@ func setupRoutes(router *gin.Engine) {
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
+	})
+	router.GET("/exit", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "Exiting the Program",
+		})
+		time.Sleep(2 * time.Second)
+		os.Exit(0)
 	})
 	router.POST("/login", LoginHandler)
 	router.POST("/adddl", AddDownloadHandler)
