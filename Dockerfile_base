@@ -1,0 +1,7 @@
+FROM golang:alpine3.15
+
+RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing --update \
+    unzip tar xz wget alpine-sdk git libtool autoconf automake linux-headers musl-dev m4 \
+    build-base perl ca-certificates zlib-dev zlib-static openssl-dev openssl-libs-static \
+    brotli-dev brotli-static crypto++-dev crypto++-static c-ares-dev c-ares-static sqlite-dev \
+    sqlite-static libsodium-dev libsodium-static curl-dev curl-static nghttp2-dev nghttp2-static
