@@ -84,6 +84,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: MegaSDK-REST v0.1.0
+          name: Version 0.1.1
           files: |
             outputs/*
