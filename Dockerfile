@@ -1,6 +1,6 @@
 FROM l3v11x/megarestbase:latest AS builder
 
-ARG CPU_ARCH="amd64"
+ARG CPU_ARCH=amd64
 ENV HOST_CPU_ARCH=$CPU_ARCH
 
 ENV VERSION=0.1.1
